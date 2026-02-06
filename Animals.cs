@@ -5,18 +5,10 @@ public class Trainer{
         string sounds = "";
 
         foreach(Animal animal in animals){
-            if(typeof(Cat).IsInstanceOfType(animal))
+            if(typeof(animal).IsInstanceOfType(animal))
             {
-                sounds += ((Cat) animal).Say() + ", ";
+                sounds += ((animal) animal).Say() + ", ";
             } 
-            else if (typeof(Dog).IsInstanceOfType(animal))
-            {   
-                sounds += ((Dog) animal).Say() + ", ";
-            } 
-            else if (typeof(Bird).IsInstanceOfType(animal))
-            {
-                sounds += ((Bird) animal).Say() + ", ";
-            }
         }
 
         return sounds;
@@ -44,4 +36,5 @@ public class Bird  : Animal{
         return "chirp";
     }
 }
+
 

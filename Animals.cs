@@ -5,10 +5,7 @@ public class Trainer{
         string sounds = "";
 
         foreach(Animal animal in animals){
-            if((Cat, Dog, Bird)IsInstanceOfType(animal))
-            {
-                sounds += ((Cat, Dog, Bird) animal).Say() + ", ";
-            } 
+                sounds += animal.Say() + ", ";
         }
 
         return sounds;
@@ -16,26 +13,27 @@ public class Trainer{
 }
 
 public abstract class Animal {
-    
+    public abstract string Say();
 }
 
 public class Cat : Animal{
-    public string Say() {
+    public override string Say() {
         return "meow";
     }
 }
 
 public class Dog : Animal{
-    public string Say() {
+    public override string Say() {
         return "woof";
     }
 }
 
 public class Bird  : Animal{
-    public string Say() {
+    public override string Say() {
         return "chirp";
     }
 }
+
 
 
 

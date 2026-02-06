@@ -5,9 +5,9 @@ public class Trainer{
         string sounds = "";
 
         foreach(Animal animal in animals){
-            if(typeof().IsInstanceOfType(animal))
+            if(IsInstanceOfType(animal))
             {
-                sounds += (()animal).Say() + ", ";
+                sounds += (animal).Say() + ", ";
             } 
         }
 
@@ -36,6 +36,7 @@ public class Bird  : Animal{
         return "chirp";
     }
 }
+
 
 
 
